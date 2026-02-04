@@ -3,6 +3,8 @@
 - **A**: 로또 앱 (Flask) — 이 저장소 **루트**
 - **B**: 금융거래 통합정보 페이지 — `financial-info/` 폴더 (정적 HTML)
 
+**Railway로 배포** → **[DEPLOY_RAILWAY.md](DEPLOY_RAILWAY.md)** (대시보드 + CLI 단계).
+
 **Render 대시보드가 안 열릴 때** → **[DEPLOY_ALTERNATIVES.md](DEPLOY_ALTERNATIVES.md)** 참고 (Railway, Vercel, GitHub Pages, Fly.io).
 
 ---
