@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "${workspaceFolder}"
+      ]
+    },
+    "fetch": {
+      "command": "py",
+      "args": ["-m", "mcp_server_fetch"]
+    },
+    "duckduckgo": {
+      "command": "py",
+      "args": ["-m", "duckduckgo_mcp_server"]
+    }
+  }
+}

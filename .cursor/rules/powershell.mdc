@@ -1,0 +1,13 @@
+---
+description: PowerShell 명령 체이닝 규칙
+alwaysApply: true
+---
+
+# PowerShell 명령어 규칙
+
+PowerShell에서는 `&&`가 지원되지 않습니다. 여러 명령을 한 줄에서 실행할 때는 `;`를 사용하세요.
+
+- **Bash/CMD:** `cd 폴더 && git status`
+- **PowerShell:** `cd 폴더; git status`
+
+터미널 명령 실행 시 이 프로젝트의 환경(Windows, PowerShell)에서 올바른 문법을 사용합니다.

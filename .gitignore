@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+Lib/
+Scripts/
+
+# Build outputs
+*.log
+*.tmp
+
+# IDE
+.vscode/
+.vscode_/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Database files (optional - uncomment if you don't want to track)
+# LottoDB.json
+

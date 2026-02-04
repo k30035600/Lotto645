@@ -1,0 +1,19 @@
+# A(Lotto645) + B(금융거래통합정보) 각각 별도 서비스/URL로 배포
+# Render 대시보드에서 이 저장소 연결 후 "Apply" 하면 두 서비스가 생성됩니다.
+
+services:
+  # A: Lotto645 (Flask 웹 앱) — 루트
+  - type: web
+    runtime: python
+    name: Lotto645
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn server:app --bind 0.0.0.0:$PORT
+    plan: free
+
+  # B: 금융거래 통합정보 (정적 페이지) — financial-info/
+  - type: web
+    runtime: static
+    name: financial-info
+    rootDir: financial-info
+    buildCommand: "echo 'No build'"
+    staticPublishPath: .
