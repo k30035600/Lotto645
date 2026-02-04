@@ -4,6 +4,39 @@ GitHub 푸시까지 완료된 상태에서 Railway로 배포하는 방법입니�
 
 ---
 
+## 지금 순서대로 하기 (웹 대시보드)
+
+브라우저에서 **https://railway.com/new/github** 가 열려 있으면 아래 순서대로 진행하세요.
+
+### 1단계: Lotto645 배포
+
+| # | 할 일 | 확인 |
+|---|--------|------|
+| 1 | Railway 로그인 (GitHub로 로그인) | ☐ |
+| 2 | **Deploy from GitHub repo** 선택 | ☐ |
+| 3 | 저장소 목록에서 **Lotto645** 선택 → Deploy | ☐ |
+| 4 | 배포 완료 후: 해당 서비스 클릭 → **Settings** → **Networking** → **Generate Domain** | ☐ |
+| 5 | 생성된 URL 복사 (예: `https://lotto645-production-xxxx.up.railway.app`) | ☐ |
+
+### 2단계: 금융거래 통합정보 배포
+
+| # | 할 일 | 확인 |
+|---|--------|------|
+| 1 | 같은 프로젝트에서 **New** → **GitHub Repo** (또는 **New Project** 후 GitHub Repo) | ☐ |
+| 2 | 저장소 **financial-info** 선택 → Deploy | ☐ |
+| 3 | **Settings** → **Networking** → **Generate Domain** | ☐ |
+| 4 | 금융거래 URL 복사 (예: `https://financial-info-production-xxxx.up.railway.app`) | ☐ |
+
+### 3단계: Lotto645에 금융거래 링크 넣기
+
+금융거래 통합정보 Railway URL을 알게 되면:
+
+1. **Lotto_v200/index.html** 134번째 줄 근처에서 `id="financial-info-link"`인 `<a>` 찾기.
+2. **data-url**과 **href** 값을 금융거래 Railway URL로 변경.
+3. 저장 후 `git add index.html` → `git commit -m "Link financial-info Railway URL"` → `git push` (Railway가 GitHub 연동이면 자동 재배포).
+
+---
+
 ## 방법 1: Railway 웹 대시보드 (권장)
 
 ### Lotto645
